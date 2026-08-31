@@ -53,15 +53,6 @@ htmlcov/
 # Machine Learning
 # ==========================================
 
-# Model checkpoints / trained models
-*.pth
-*.pt
-*.ckpt
-*.onnx
-*.h5
-*.pkl
-*.joblib
-
 # ML experiment outputs
 runs/
 wandb/
