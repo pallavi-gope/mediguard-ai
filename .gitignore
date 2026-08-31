@@ -1,0 +1,238 @@
+# ==========================================
+# MediGuard AI - Global Git Ignore
+# ==========================================
+
+
+# ==========================================
+# Python
+# ==========================================
+
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python build/package files
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Test / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+
+# ==========================================
+# Environment Variables / Secrets
+# ==========================================
+
+.env
+.env.*
+!.env.example
+
+
+# ==========================================
+# Jupyter Notebook
+# ==========================================
+
+.ipynb_checkpoints/
+
+
+# ==========================================
+# Machine Learning
+# ==========================================
+
+# Model checkpoints / trained models
+*.pth
+*.pt
+*.ckpt
+*.onnx
+*.h5
+*.pkl
+*.joblib
+
+# ML experiment outputs
+runs/
+wandb/
+mlruns/
+checkpoints/
+
+# TensorBoard
+tensorboard/
+
+
+# ==========================================
+# Datasets
+# ==========================================
+
+# Ignore large datasets
+datasets/*
+!datasets/.gitkeep
+
+# Common dataset files
+*.csv
+*.xlsx
+*.xls
+*.parquet
+*.feather
+
+# Images / videos / audio used for training
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+*.webp
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.wav
+*.mp3
+*.flac
+
+
+# ==========================================
+# React / Node / Vite
+# ==========================================
+
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+.npm/
+.yarn/
+.pnpm-store/
+
+# Vite
+dist/
+.vite/
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+
+# ==========================================
+# React build files
+# ==========================================
+
+build/
+dist/
+coverage/
+
+
+# ==========================================
+# IDE / Editors
+# ==========================================
+
+.vscode/
+.idea/
+*.iml
+
+# VS Code local history
+.history/
+
+
+# ==========================================
+# Operating System
+# ==========================================
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~
+
+
+# ==========================================
+# Logs
+# ==========================================
+
+*.log
+logs/
+
+
+# ==========================================
+# Temporary files
+# ==========================================
+
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+
+
+# ==========================================
+# Database
+# ==========================================
+
+*.sqlite
+*.sqlite3
+*.db
+
+
+# ==========================================
+# PHP / Laravel / Yii
+# ==========================================
+
+# Composer
+/vendor/
+
+# Laravel
+/storage/*.key
+/storage/logs/
+bootstrap/cache/
+
+# Yii
+/runtime/
+/web/assets/
+
+# PHPStorm
+.phpunit.result.cache
+
+
+# ==========================================
+# Secrets / Certificates
+# ==========================================
+
+*.pem
+*.key
+*.crt
+*.cer
+*.p12
+*.pfx
+
+
+# ==========================================
+# Generated files
+# ==========================================
+
+*.cache
+*.generated.*
