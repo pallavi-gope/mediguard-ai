@@ -1,15 +1,12 @@
 import { useState } from 'react'
+import AppRoutes from './routes/AppRoutes';
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
-      <section id="center">
-        <h1>home page</h1>
-      </section>
-    </>
-  )
+    <AppRoutes />
+  );
 }
 
-export default App
+export default App;
