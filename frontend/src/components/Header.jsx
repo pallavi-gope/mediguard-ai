@@ -9,11 +9,11 @@ const Header = () => {
             <div className="mx-auto flex h-[78px] max-w-[1400px] items-center justify-between px-6 lg:px-10">
                 <a href="/" className="flex items-center gap-2.5">
                     <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-teal-50 text-teal-500">
-                        <FeatherIcon icon="Activity" />
+                        <img src="./src/assets/images/logos/logo.png" alt="logo" />
                     </div>
                     <div className="leading-none">
                         <div className="text-[19px] font-bold tracking-tight text-slate-800">
-                            MediGuard <span className="text-teal-500">AI</span>
+                            MediGuard <span className="color-primary">AI</span>
                         </div>
                         <p className="mt-1 text-[9px] font-medium tracking-wide text-slate-500">
                             AI Multimodal Analysis Platform
@@ -33,7 +33,7 @@ const Header = () => {
                     <a href="/login" className="flex h-10 items-center gap-2 rounded-lg border border-slate-200 bg-white px-5 text-[13px] font-semibold text-slate-600 shadow-sm transition-all hover:border-teal-200 hover:text-teal-600">
                         <FeatherIcon icon="user" size={16} /> Login
                     </a>
-                    <a href="/signup" className="flex h-10 items-center rounded-lg bg-teal-500 px-6 text-[13px] font-semibold text-white shadow-sm transition-all hover:bg-teal-600 hover:shadow-md">Get Started</a>
+                    <a href="/signup" className="flex h-10 items-center rounded-lg bg-primary px-6 text-[13px] font-semibold text-white shadow-sm transition-all hover:bg-teal-600 hover:shadow-md">Get Started</a>
 
                 </div>
                 <button type="button" onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-200 text-slate-600 lg:hidden" aria-label="Toggle menu">

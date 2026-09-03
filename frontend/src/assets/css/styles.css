@@ -1,4 +1,12 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    --primary-color: #1092a8;
+    --secondary-color: #0f72b6;
+    --font-color: #1D293D;
+    --font-family: "Inter", sans-serif;
+}
 
 *,
 *::before,
@@ -13,9 +21,9 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: var(--font-family);
     background-color: #f8fafc;
-    color: #1e293b;
+    color: var(--font-color);
     line-height: 1.5;
 }
 
@@ -77,8 +85,8 @@ img {
 }
 
 ::selection {
-    background-color: #ccfbf1;
-    color: #134e4a;
+    background-color: var(--primary-color);
+    color: var(--font-color);
 }
 
 #root {
@@ -91,4 +99,72 @@ img {
 
 .cursor-pointer {
     cursor: pointer;
+}
+
+.color-primary {
+    color: var(--primary-color);
+}
+
+.color-secondary {
+    color: var(--secondary-color);
+}
+
+.bg-primary {
+    background-color: var(--primary-color);
+}
+
+.bg-secondary {
+    background-color: var(--secondary-color);
+}
+
+.border-primary {
+    border-color: var(--primary-color);
+}
+
+.border-secondary {
+    border-color: var(--secondary-color);
+}
+
+.text-white {
+    color: #fff;
+}
+
+.content-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.hero-sub-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+.hero-title {
+    font-size: 40px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.section-title {
+    font-size: 30px;
+    line-height: 1.3;
+    font-weight: 700;
+    font-family: var(--font-family);
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 20px;
+    line-height: 1.3;
+    font-weight: 700;
+    font-family: var(--font-family);
+    color: var(--secondary-color);
+}
+
+.module-card {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
 }

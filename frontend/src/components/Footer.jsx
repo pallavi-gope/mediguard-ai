@@ -17,12 +17,12 @@ const Footer = () => {
                     <div>
                         <a href="/" className="flex items-center gap-2.5">
                             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-teal-500/10 text-teal-400">
-                                <FeatherIcon icon="activity" size={25} />
+                                <img src="./src/assets/images/logos/logo.png" alt="logo" />
                             </div>
 
                             <div className="leading-none">
                                 <div className="text-[18px] font-bold tracking-tight text-white">
-                                    MediGuard <span className="text-teal-400">AI</span>
+                                    MediGuard <span className="color-primary">AI</span>
                                 </div>
                                 <p className="mt-1 text-[8px] font-medium tracking-wide text-slate-400">
                                     AI Multimodal Analysis Platform
