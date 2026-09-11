@@ -1,8 +1,9 @@
 import FeatherIcon from 'feather-icons-react';
-import loginBg from '../assets/images/login-bg.png';
+import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Login = () => {
+    const [showPassword, setShowPassword] = useState(false);
     const features = [
         {
             icon: (
@@ -50,7 +51,7 @@ const Login = () => {
             <section className="login-bg">
                 <div className="w-full max-w-7xl px-4 md:px-0 mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-12 md:gap-10 items-center" style={{ minHeight: '90vh' }}>
-                        <div className="md:col-span-4 py-16">
+                        <div className="md:col-span-4 py-4 md:py-16">
                             <h1 className="hero-title mt-2 mb-3">
                                 Intelligent Analysis.<br />
                                 <span className="color-primary">Trusted Results.</span>
@@ -84,15 +85,19 @@ const Login = () => {
                                     <div className="mt-5 pt-5">
                                         <div class="relative">
                                             <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                                                <FeatherIcon icon="mail" height={18} />
+                                                <FeatherIcon icon="mail" height={18} className="text-gray-500" />
                                             </div>
                                             <input type="text" id="input-group-1" class="custom-input" placeholder="Enter Your Email" />
                                         </div>
                                         <div class="relative mt-5">
                                             <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
-                                                <FeatherIcon icon="lock" height={18} />
+                                                <FeatherIcon icon="lock" height={18} className="text-gray-500" />
                                             </div>
-                                            <input type="password" id="input-group-1" class="custom-input" placeholder="Enter Your Password" />
+                                            <input type={showPassword ? "text" : "password"} id="input-group-1" class="custom-input" placeholder="Enter Your Password" />
+                                            <button type="button" onClick={() => setShowPassword(!showPassword)}
+                                                className="absolute inset-y-0 end-0 flex items-center pe-3 text-gray-400 hover:text-gray-700 focus:outline-none">
+                                                <FeatherIcon icon={showPassword ? "eye" : "eye-off"} height={18} />
+                                            </button>
                                         </div>
                                         <div class="relative mt-5 flex justify-between">
                                             <div>
@@ -105,7 +110,7 @@ const Login = () => {
                                             <button type='submit' className='btn-primary w-100'><b>Login</b></button>
                                         </div>
                                         <div class="relative mt-5 text-center">
-                                            <p>Don't have an account? <NavLink to="/register"> Sign Up</NavLink></p>
+                                            <p>Don't have an account? <NavLink to="/signup"> Sign Up</NavLink></p>
                                         </div>
                                     </div>
                                 </form>

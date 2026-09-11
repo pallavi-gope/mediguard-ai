@@ -1,4 +1,5 @@
 import FeatherIcon from "feather-icons-react";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
     return (
@@ -15,7 +16,7 @@ const Footer = () => {
                 <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-[1.7fr_1fr_1fr_1.2fr_1fr]">
                     {/* Brand */}
                     <div>
-                        <a href="/" className="flex items-center gap-2.5">
+                        <NavLink toassName="flex items-center gap-2.5">
                             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-teal-500/10 text-teal-400">
                                 <img src="./src/assets/images/logos/logo.png" alt="logo" />
                             </div>
@@ -28,7 +29,7 @@ const Footer = () => {
                                     AI Multimodal Analysis Platform
                                 </p>
                             </div>
-                        </a>
+                        </NavLink>
                         <p className="mt-5 max-w-[260px] text-[12px] leading-5 text-slate-300">
                             Empowering healthcare & digital security
                             <br />
@@ -36,18 +37,18 @@ const Footer = () => {
                         </p>
                         {/* Social Icons */}
                         <div className="mt-4 flex items-center gap-3">
-                            <a href="#" className="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 text-slate-300 transition hover:bg-teal-500 hover:text-white">
+                            <NavLink to="#" className="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 text-slate-300 transition hover:bg-teal-500 hover:text-white">
                                 <FeatherIcon icon="facebook" size={14} />
-                            </a>
-                            <a href="#" className="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 text-slate-300 transition hover:bg-teal-500 hover:text-white">
+                            </NavLink>
+                            <NavLink to="#" className="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 text-slate-300 transition hover:bg-teal-500 hover:text-white">
                                 <FeatherIcon icon="twitter" size={14} />
-                            </a>
-                            <a href="#" className="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 text-slate-300 transition hover:bg-teal-500 hover:text-white">
+                            </NavLink>
+                            <NavLink to="#" className="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 text-slate-300 transition hover:bg-teal-500 hover:text-white">
                                 <FeatherIcon icon="linkedin" size={14} />
-                            </a>
-                            <a href="#" className="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 text-slate-300 transition hover:bg-teal-500 hover:text-white">
+                            </NavLink>
+                            <NavLink to="#" className="flex h-7 w-7 items-center justify-center rounded-full bg-white/10 text-slate-300 transition hover:bg-teal-500 hover:text-white">
                                 <FeatherIcon icon="github" size={14} />
-                            </a>
+                            </NavLink>
                         </div>
                     </div>
 
@@ -58,11 +59,11 @@ const Footer = () => {
                         </h3>
 
                         <nav className="flex flex-col gap-2">
-                            <a href="/" className="text-[11px] text-slate-300 transition hover:text-teal-400">Home</a>
-                            <a href="#features" className="text-[11px] text-slate-300 transition hover:text-teal-400">Features</a>
-                            <a href="#how-it-works" className="text-[11px] text-slate-300 transition hover:text-teal-400">How It Works</a>
-                            <a href="#pricing" className="text-[11px] text-slate-300 transition hover:text-teal-400">Pricing</a>
-                            <a href="#contact" className="text-[11px] text-slate-300 transition hover:text-teal-400">Contact</a>
+                            <NavLink to="/" className="text-[11px] text-slate-300 transition hover:text-teal-400">Home</NavLink>
+                            <NavLink to="#features" className="text-[11px] text-slate-300 transition hover:text-teal-400">Features</NavLink>
+                            <NavLink to="#how-it-works" className="text-[11px] text-slate-300 transition hover:text-teal-400">How It Works</NavLink>
+                            <NavLink to="#pricing" className="text-[11px] text-slate-300 transition hover:text-teal-400">Pricing</NavLink>
+                            <NavLink to="#contact" className="text-[11px] text-slate-300 transition hover:text-teal-400">Contact</NavLink>
                         </nav>
                     </div>
 
@@ -74,11 +75,11 @@ const Footer = () => {
                         </h3>
 
                         <nav className="flex flex-col gap-2">
-                            <a href="#medical-analysis" className="text-[11px] text-slate-300 transition hover:text-teal-400">Medical Analysis</a>
-                            <a href="#deepfake-detection" className="text-[11px] text-slate-300 transition hover:text-teal-400">DeepFake Detection</a>
-                            <a href="#reports" className="text-[11px] text-slate-300 transition hover:text-teal-400">Reports</a>
-                            <a href="#history" className="text-[11px] text-slate-300 transition hover:text-teal-400">History</a>
-                            <a href="#pricing" className="text-[11px] text-slate-300 transition hover:text-teal-400">Pricing</a>
+                            <NavLink to="#medical-analysis" className="text-[11px] text-slate-300 transition hover:text-teal-400">Medical Analysis</NavLink>
+                            <NavLink to="#deepfake-detection" className="text-[11px] text-slate-300 transition hover:text-teal-400">DeepFake Detection</NavLink>
+                            <NavLink to="#reports" className="text-[11px] text-slate-300 transition hover:text-teal-400">Reports</NavLink>
+                            <NavLink to="#history" className="text-[11px] text-slate-300 transition hover:text-teal-400">History</NavLink>
+                            <NavLink to="#pricing" className="text-[11px] text-slate-300 transition hover:text-teal-400">Pricing</NavLink>
                         </nav>
                     </div>
 
@@ -90,10 +91,10 @@ const Footer = () => {
                         </h3>
 
                         <nav className="flex flex-col gap-2">
-                            <a href="/privacy-policy" className="text-[11px] text-slate-300 transition hover:text-teal-400">Privacy Policy</a>
-                            <a href="/terms" className="text-[11px] text-slate-300 transition hover:text-teal-400">Terms of Service</a>
-                            <a href="/refund-policy" className="text-[11px] text-slate-300 transition hover:text-teal-400">Refund Policy</a>
-                            <a href="/disclaimer" className="text-[11px] text-slate-300 transition hover:text-teal-400">Disclaimer</a>
+                            <NavLink to="/privacy-policy" className="text-[11px] text-slate-300 transition hover:text-teal-400">Privacy Policy</NavLink>
+                            <NavLink to="/terms" className="text-[11px] text-slate-300 transition hover:text-teal-400">Terms of Service</NavLink>
+                            <NavLink to="/refund-policy" className="text-[11px] text-slate-300 transition hover:text-teal-400">Refund Policy</NavLink>
+                            <NavLink to="/disclaimer" className="text-[11px] text-slate-300 transition hover:text-teal-400">Disclaimer</NavLink>
                         </nav>
                     </div>
 
@@ -104,18 +105,18 @@ const Footer = () => {
                             Contact Us
                         </h3>
                         <div className="flex flex-col gap-3">
-                            <a href="mailto:support@mediguard.com" className="flex items-center gap-3 text-[11px] text-slate-300 transition hover:text-teal-400" >
+                            <NavLink to="mailto:support@mediguard.com" className="flex items-center gap-3 text-[11px] text-slate-300 transition hover:text-teal-400" >
                                 <FeatherIcon icon="mail" size={14} />
                                 <span>support@mediguard.com</span>
-                            </a>
-                            <a href="tel:+919876543210" className="flex items-center gap-3 text-[11px] text-slate-300 transition hover:text-teal-400" >
+                            </NavLink>
+                            <NavLink to="tel:+919876543210" className="flex items-center gap-3 text-[11px] text-slate-300 transition hover:text-teal-400" >
                                 <FeatherIcon icon="phone" size={14} />
                                 <span>+91 98765 43210</span>
-                            </a>
-                            <a href="tel:+919876543210" className="flex items-center gap-3 text-[11px] text-slate-300 transition hover:text-teal-400" >
+                            </NavLink>
+                            <NavLink to="tel:+919876543210" className="flex items-center gap-3 text-[11px] text-slate-300 transition hover:text-teal-400" >
                                 <FeatherIcon icon="phone" size={14} />
                                 <span>+91 98765 43210</span>
-                            </a>
+                            </NavLink>
                             <div className="flex items-center gap-3 text-[11px] text-slate-300">
                                 <FeatherIcon icon="map-pin" size={14} />
                                 <span>India</span>

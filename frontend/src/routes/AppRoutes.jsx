@@ -5,6 +5,7 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Dashboard from "../pages/Dashboard";
 import Home from "../pages/Home";
+import ForgotPassword from "../pages/ForgotPassword";
 
 const AppRoutes = () => {
     return (
@@ -14,6 +15,7 @@ const AppRoutes = () => {
                     <Route path="/" element={<Home />} />
                     <Route path="/login" element={<Login />} />
                     <Route path="/signup" element={<Register />} />
+                    <Route path="/forgot-password" element={<ForgotPassword />} />
                 </Route>
                 <Route element={<ProtectedLayout />}>
                     <Route path="/dashboard" element={<Dashboard />} />
