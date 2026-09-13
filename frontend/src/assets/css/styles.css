@@ -101,6 +101,10 @@ img {
     min-height: 80vh;
 }
 
+.min-h-screen-2 {
+    min-height: 85vh;
+}
+
 header nav a {
     color: var(--font-color);
 }
@@ -279,4 +283,14 @@ input[type="checkbox"]:focus {
 
 a {
     color: var(--primary-color);
+}
+
+aside a {
+    color: oklch(86.9% 0.022 252.894);
+}
+
+.dashboard-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--font-color);
 }

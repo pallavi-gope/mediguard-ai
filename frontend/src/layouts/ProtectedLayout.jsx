@@ -28,7 +28,7 @@ const ProtectedLayout = () => {
                 {/* Header */}
                 <ProtectedHeader toggleSidebar={toggleSidebar} isCollapsed={isCollapsed} />
                 {/* Page Content */}
-                <main className="flex-1 p-4 sm:p-6 lg:p-8">
+                <main className="min-h-screen-2 flex-1 p-4 sm:p-6 lg:px-5 lg:py-3">
                     <Outlet />
                 </main>
                 {/* Footer */}

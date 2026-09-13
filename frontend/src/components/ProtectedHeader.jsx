@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import FeatherIcon from "feather-icons-react";
+import { NavLink } from "react-router-dom";
 
 const ProtectedHeader = ({ toggleSidebar }) => {
     const searchInputRef = useRef(null);
@@ -18,7 +19,7 @@ const ProtectedHeader = ({ toggleSidebar }) => {
     }, []);
 
     return (
-        <header className="sticky top-0 z-30 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-xs px-4 sm:px-6 py-3 transition-all">
+        <header className="sticky top-0 z-30 bg-white/90 backdrop-blur-md border-b border-slate-100 shadow-xs px-4 sm:px-6 py-2 transition-all">
             <div className="flex items-center justify-between gap-4">
                 {/* Left Side: Hamburger & Search Input */}
                 <div className="flex items-center gap-3 sm:gap-4 flex-1 max-w-xl">
@@ -71,12 +72,12 @@ const ProtectedHeader = ({ toggleSidebar }) => {
                                     <p className="text-sm font-semibold text-slate-800">User</p>
                                     <p className="text-xs text-slate-500">Role</p>
                                 </div>
-                                <a href="/dashboard/profile" className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-teal-600 transition-colors">
+                                <NavLink to="/profile" className="block px-4 py-2 text-xs !text-slate-700 hover:bg-slate-50 hover:text-teal-600 transition-colors">
                                     My Profile
-                                </a>
-                                <a href="/dashboard/settings" className="block px-4 py-2 text-xs text-slate-700 hover:bg-slate-50 hover:text-teal-600 transition-colors">
+                                </NavLink>
+                                <NavLink to="/settings" className="block px-4 py-2 text-xs !text-slate-700 hover:bg-slate-50 hover:text-teal-600 transition-colors">
                                     Account Settings
-                                </a>
+                                </NavLink>
                                 <div className="border-t border-slate-100 my-1" />
                                 <button type="button"
                                     onClick={() => {

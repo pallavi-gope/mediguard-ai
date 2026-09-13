@@ -28,13 +28,11 @@ const ProtectedSidebar = ({
             {/* Sidebar Container */}
             <aside
                 className={`fixed top-0 left-0 z-50 h-screen bg-[#0B1528] text-slate-300 flex flex-col justify-between transition-all duration-300 ease-in-out border-r border-slate-800/80 shadow-2xl lg:shadow-none ${isMobileOpen ? "translate-x-0 w-64" : "-translate-x-full lg:translate-x-0"
-                    } ${isCollapsed ? "lg:w-20" : "lg:w-64"}`}
-            >
+                    } ${isCollapsed ? "lg:w-20" : "lg:w-64"}`}>
                 {/* Top: Logo & App Branding */}
                 <div
                     className={`h-[70px] border-b border-slate-800/60 flex items-center transition-all duration-300 ${isCollapsed ? "justify-center px-2" : "px-5 gap-3"
-                        }`}
-                >
+                        }`}>
                     <div className="w-10 h-10 rounded-xl bg-teal-500/15 border border-teal-500/30 flex items-center justify-center p-1.5 shrink-0 shadow-[0_0_15px_rgba(20,184,166,0.25)]">
                         <img src="./src/assets/images/logos/logo.png" alt="MedAI Guard" className="w-full h-full object-contain" onError={(e) => {
                             e.target.style.display = "none";
@@ -104,29 +102,16 @@ const ProtectedSidebar = ({
                         {/* Expanded Sub-links */}
                         {!isCollapsed && isMedicalOpen && (
                             <div className="pl-11 pr-2 py-1 space-y-1 text-xs">
-                                <NavLink to="/dashboard/medical-records" className="block py-2 px-3 rounded-lg text-slate-400 hover:text-teal-300 hover:bg-slate-800/40 transition-colors">
+                                <NavLink to="/medical-analyzer" className="block py-2 px-3 rounded-lg text-slate-400 hover:text-teal-300 hover:bg-slate-800/40 transition-colors">
                                     New Analysis
                                 </NavLink>
-                                <NavLink to="/dashboard/lab-reports" className="block py-2 px-3 rounded-lg text-slate-400 hover:text-teal-300 hover:bg-slate-800/40 transition-colors">
+                                <NavLink to="/my-analysis" className="block py-2 px-3 rounded-lg text-slate-400 hover:text-teal-300 hover:bg-slate-800/40 transition-colors">
                                     My Analysis
                                 </NavLink>
                             </div>
                         )}
 
                         {/* Collapsed Flyout Popover */}
-                        {isCollapsed && (
-                            <div className="absolute left-full top-0 ml-3.5 w-48 bg-[#0B1528] rounded-xl shadow-2xl border border-slate-700/80 py-2 px-1.5 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-150 z-50">
-                                <div className="px-3 py-1 text-xs font-bold text-white border-b border-slate-800 mb-1">
-                                    Medical Analyzer
-                                </div>
-                                <NavLink to="/dashboard/medical-records" className="block px-3 py-2 text-xs text-slate-300 hover:text-teal-300 hover:bg-slate-800/60 rounded-lg transition-colors">
-                                    New Analysis
-                                </NavLink>
-                                <NavLink to="/dashboard/lab-reports" className="block px-3 py-2 text-xs text-slate-300 hover:text-teal-300 hover:bg-slate-800/60 rounded-lg transition-colors">
-                                    My Analysis
-                                </NavLink>
-                            </div>
-                        )}
                     </div>
 
                     {/* 3. DeepFake Detector (Dropdown / Flyout in mini mode) */}
@@ -156,35 +141,22 @@ const ProtectedSidebar = ({
                         {/* Expanded Sub-links */}
                         {!isCollapsed && isDeepFakeOpen && (
                             <div className="pl-11 pr-2 py-1 space-y-1 text-xs">
-                                <NavLink to="/dashboard/detect-image" className="block py-2 px-3 rounded-lg text-slate-400 hover:text-teal-300 hover:bg-slate-800/40 transition-colors">
+                                <NavLink to="/deepfake-detector" className="block py-2 px-3 rounded-lg text-slate-400 hover:text-teal-300 hover:bg-slate-800/40 transition-colors">
                                     New Detection
                                 </NavLink>
-                                <NavLink to="/dashboard/detect-video" className="block py-2 px-3 rounded-lg text-slate-400 hover:text-teal-300 hover:bg-slate-800/40 transition-colors">
+                                <NavLink to="/my-detections" className="block py-2 px-3 rounded-lg text-slate-400 hover:text-teal-300 hover:bg-slate-800/40 transition-colors">
                                     My Detections
                                 </NavLink>
                             </div>
                         )}
 
                         {/* Collapsed Flyout Popover */}
-                        {isCollapsed && (
-                            <div className="absolute left-full top-0 ml-3.5 w-48 bg-[#0B1528] rounded-xl shadow-2xl border border-slate-700/80 py-2 px-1.5 opacity-0 pointer-events-none group-hover:opacity-100 group-hover:pointer-events-auto transition-all duration-150 z-50">
-                                <div className="px-3 py-1 text-xs font-bold text-white border-b border-slate-800 mb-1">
-                                    DeepFake Detector
-                                </div>
-                                <NavLink to="/dashboard/detect-image" className="block px-3 py-2 text-xs text-slate-300 hover:text-teal-300 hover:bg-slate-800/60 rounded-lg transition-colors">
-                                    New Detection
-                                </NavLink>
-                                <NavLink to="/dashboard/detect-video" className="block px-3 py-2 text-xs text-slate-300 hover:text-teal-300 hover:bg-slate-800/60 rounded-lg transition-colors">
-                                    My Detection
-                                </NavLink>
-                            </div>
-                        )}
                     </div>
 
                     {/* 4. History */}
                     <div className="relative group">
                         <NavLink
-                            to="/dashboard/history"
+                            to="/history"
                             className={({ isActive }) =>
                                 `flex items-center rounded-xl font-medium text-sm transition-colors ${isCollapsed
                                     ? "justify-center h-12 w-full px-0"
@@ -208,7 +180,7 @@ const ProtectedSidebar = ({
                     {/* 5. Reports */}
                     <div className="relative group">
                         <NavLink
-                            to="/dashboard/reports"
+                            to="/reports"
                             className={({ isActive }) =>
                                 `flex items-center rounded-xl font-medium text-sm transition-colors ${isCollapsed
                                     ? "justify-center h-12 w-full px-0"
@@ -232,7 +204,7 @@ const ProtectedSidebar = ({
                     {/* 6. Favorites */}
                     <div className="relative group">
                         <NavLink
-                            to="/dashboard/favorites"
+                            to="/favorites"
                             className={({ isActive }) =>
                                 `flex items-center rounded-xl font-medium text-sm transition-colors ${isCollapsed
                                     ? "justify-center h-12 w-full px-0"
@@ -256,7 +228,7 @@ const ProtectedSidebar = ({
                     {/* 7. Profile */}
                     <div className="relative group">
                         <NavLink
-                            to="/dashboard/profile"
+                            to="/profile"
                             className={({ isActive }) =>
                                 `flex items-center rounded-xl font-medium text-sm transition-colors ${isCollapsed
                                     ? "justify-center h-12 w-full px-0"
@@ -280,7 +252,7 @@ const ProtectedSidebar = ({
                     {/* 8. Settings */}
                     <div className="relative group">
                         <NavLink
-                            to="/dashboard/settings"
+                            to="/settings"
                             className={({ isActive }) =>
                                 `flex items-center rounded-xl font-medium text-sm transition-colors ${isCollapsed
                                     ? "justify-center h-12 w-full px-0"
