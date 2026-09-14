@@ -6,7 +6,7 @@ import Register from "../pages/Register";
 import Dashboard from "../pages/Dashboard";
 import Home from "../pages/Home";
 import ForgotPassword from "../pages/ForgotPassword";
-import MedicalAnalyzer from "../pages/MedicalAnalyzer";
+import MedicalReportAnalyzer from "../pages/MedicalReportAnalyzer";
 import DeepfakeDetector from "../pages/DeepfakeDetector";
 import MyAnalysis from "../pages/MyAnalysis";
 import MyDetections from "../pages/MyDetections";
@@ -28,7 +28,7 @@ const AppRoutes = () => {
                 </Route>
                 <Route element={<ProtectedLayout />}>
                     <Route path="/dashboard" element={<Dashboard />} />
-                    <Route path="/medical-analyzer" element={<MedicalAnalyzer />} />
+                    <Route path="/medical-report-analyzer" element={<MedicalReportAnalyzer />} />
                     <Route path="/deepfake-detector" element={<DeepfakeDetector />} />
                     <Route path="/my-analysis" element={<MyAnalysis />} />
                     <Route path="/my-detections" element={<MyDetections />} />

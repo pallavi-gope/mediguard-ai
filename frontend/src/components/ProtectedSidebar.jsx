@@ -102,7 +102,7 @@ const ProtectedSidebar = ({
                         {/* Expanded Sub-links */}
                         {!isCollapsed && isMedicalOpen && (
                             <div className="pl-11 pr-2 py-1 space-y-1 text-xs">
-                                <NavLink to="/medical-analyzer" className="block py-2 px-3 rounded-lg text-slate-400 hover:text-teal-300 hover:bg-slate-800/40 transition-colors">
+                                <NavLink to="/medical-report-analyzer" className="block py-2 px-3 rounded-lg text-slate-400 hover:text-teal-300 hover:bg-slate-800/40 transition-colors">
                                     New Analysis
                                 </NavLink>
                                 <NavLink to="/my-analysis" className="block py-2 px-3 rounded-lg text-slate-400 hover:text-teal-300 hover:bg-slate-800/40 transition-colors">
